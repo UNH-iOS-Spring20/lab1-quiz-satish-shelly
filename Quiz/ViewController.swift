@@ -9,13 +9,31 @@
 import UIKit
 import os
 class ViewController: UIViewController {
-
+    let questions: [String] = [
+        "What is the origin of corona virus?",
+        "What is the location for very recent fire accidents?",
+        "Which basket ball player recently died in plane crash?",
+        "Who is the Prime Minister of India? "
+    ]
+    
+    let answers: [String] = [
+        "China",
+        "Australia",
+        "Kobe",
+        "Narendra Modi Ji"
+    ]
+    
+    var index: Int = 0
+    @IBOutlet  var nextquestion:  UILabel!
+    @IBOutlet var nextanswer: UILabel!
+    @IBAction func showNextQuestion(){
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         os_log("I am in starting phase")
         // Do any additional setup after loading the view.
-        os_log("rweydfkerhfvmje lbvivcug/oq58vt735vto3t")
-        os_log("abc")
     }
 
 
