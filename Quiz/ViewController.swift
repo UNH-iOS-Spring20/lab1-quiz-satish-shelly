@@ -23,15 +23,27 @@ class ViewController: UIViewController {
         "Narendra Modi Ji"
     ]
     
-    var index: Int = 0
+    var Index: Int = 0
     @IBOutlet  var nextquestion:  UILabel!
     @IBOutlet var nextanswer: UILabel!
     @IBAction func showNextQuestion(){
-        
+        Index+=1
+        if(Index == questions.count){
+            Index = 0
+        }
+        let question = questions[Index]
+        nextquestion.text = question
+        nextanswer.text = "???"
     }
+    @IBAction func showNextAnswer(){
+        let answer: String = answers[Index]
+        nextanswer.text = answer
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let question: String = questions[Index]
+        nextquestion.text = question
         os_log("I am in starting phase")
         // Do any additional setup after loading the view.
     }
